@@ -7,6 +7,7 @@ import Products from "./pages/Products";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import { Analytics } from "@vercel/analytics/next"
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -31,6 +32,7 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
+      <Analytics/>
     </Router>
   );
 }
