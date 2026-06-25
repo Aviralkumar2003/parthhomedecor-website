@@ -28,7 +28,7 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
           {product.category}
         </span>
         <div className="absolute inset-x-0 bottom-0 p-6 text-ivory">
-          <h3 className="font-display text-2xl">{product.name}</h3>
+          <h3 className="font-display text-xl md:text-2xl">{product.name}</h3>
           <p className="mt-2 max-h-0 overflow-hidden text-sm leading-relaxed text-ivory/80 opacity-0 transition-all duration-500 group-hover:max-h-24 group-hover:opacity-100">
             {product.description}
           </p>

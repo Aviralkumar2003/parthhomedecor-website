@@ -3,50 +3,7 @@ import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { PageShell } from "../components/PageShell";
 import { useDocumentMetadata } from "../hooks/useDocumentMetadata";
-
-const services = [
-  {
-    eyebrow: "Interior Solutions",
-    title: "Residential & commercial interiors that endure.",
-    desc: "From private residences to flagship retail, our team delivers complete interior work — wall, ceiling, decorative finishes — coordinated to a single design language.",
-    items: [
-      "Residential Interior Work",
-      "Commercial Interior Work",
-      "Wall & Ceiling Solutions",
-      "Decorative Finishes",
-    ],
-    image:
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1400&q=80",
-  },
-  {
-    eyebrow: "Modular Solutions",
-    title: "Modular kitchens, storage and bespoke joinery.",
-    desc: "Engineered for daily life and built to last. Premium core materials, German hardware and a precision-fit installation process.",
-    items: ["Modular Kitchens", "Storage Solutions", "Custom Interior Fabrication"],
-    image:
-      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1400&q=80",
-  },
-  {
-    eyebrow: "Exterior Solutions",
-    title: "Facades that compose the first impression.",
-    desc: "ACP elevations, HPL facades and decorative installations — engineered for weather, designed for character.",
-    items: ["ACP Elevation Work", "HPL Facades", "Exterior Decorative Installations"],
-    image:
-      "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1400&q=80",
-  },
-  {
-    eyebrow: "Lighting Solutions",
-    title: "Light as architecture.",
-    desc: "From consultation to commissioning — we plan lighting layers that sculpt your space across day and evening modes.",
-    items: [
-      "Lighting Design Consultation",
-      "Decorative Lighting Installation",
-      "Architectural Lighting",
-    ],
-    image:
-      "https://images.unsplash.com/photo-1565814329452-e1efa11c5b89?auto=format&fit=crop&w=1400&q=80",
-  },
-];
+import { services } from "../data/siteData";
 
 export default function ServicesPage() {
   useDocumentMetadata(
@@ -68,13 +25,13 @@ export default function ServicesPage() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="mt-5 max-w-4xl font-display text-5xl text-balance md:text-7xl"
+          className="mt-5 max-w-4xl font-display text-4xl text-balance md:text-5xl lg:text-7xl"
         >
           Services crafted for projects that demand more.
         </motion.h1>
       </section>
 
-      <div className="space-y-28 pb-32 md:space-y-40">
+      <div className="space-y-20 pb-32 md:space-y-28 lg:space-y-40">
         {services.map((s, i) => (
           <section key={s.eyebrow} className="container-luxury">
             <div
@@ -106,7 +63,7 @@ export default function ServicesPage() {
                 transition={{ duration: 0.8, delay: 0.1 }}
               >
                 <span className="text-xs uppercase tracking-[0.3em] text-accent">{s.eyebrow}</span>
-                <h2 className="mt-4 font-display text-4xl text-balance md:text-5xl">{s.title}</h2>
+                <h2 className="mt-4 font-display text-3xl text-balance md:text-4xl lg:text-5xl">{s.title}</h2>
                 <p className="mt-5 leading-relaxed text-muted-foreground">{s.desc}</p>
                 <ul className="mt-8 space-y-3">
                   {s.items.map((it) => (
