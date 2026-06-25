@@ -3,93 +3,13 @@ import { motion } from "motion/react";
 import { ArrowRight, Sparkles, Award, Lightbulb, Layers, Wrench } from "lucide-react";
 import { PageShell, SectionHeading } from "../components/PageShell";
 import { useDocumentMetadata } from "../hooks/useDocumentMetadata";
+import { homeFeatures, homeCategories, homeGallery, homeTestimonials } from "../data/siteData";
 
 const heroVideo = "https://cdn.pixabay.com/video/2020/05/25/40130-424888193_large.mp4";
 const heroPoster =
   "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1920&q=80";
 
-const features = [
-  {
-    icon: Award,
-    title: "Premium Quality Materials",
-    desc: "Sourced from leading mills and global brands, every product meets a luxury standard.",
-  },
-  {
-    icon: Sparkles,
-    title: "Expert Consultation",
-    desc: "Our designers translate your vision into a curated, cohesive specification.",
-  },
-  {
-    icon: Lightbulb,
-    title: "Latest Design Trends",
-    desc: "From fluted oak to architectural lighting — we move with the global aesthetic.",
-  },
-  {
-    icon: Layers,
-    title: "End-to-End Solutions",
-    desc: "Materials, modular, exterior elevation and lighting under one roof.",
-  },
-  {
-    icon: Wrench,
-    title: "Reliable Installation",
-    desc: "Skilled craftsmen and project managers ensure a flawless finish.",
-  },
-];
-
-const categories = [
-  {
-    title: "Interior Materials",
-    count: "13 Collections",
-    img: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    title: "Modular Kitchens",
-    count: "Custom Built",
-    img: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    title: "Exterior Elevation",
-    count: "ACP · HPL",
-    img: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    title: "Designer Lighting",
-    count: "Architectural",
-    img: "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&w=1200&q=80",
-  },
-];
-
-const gallery = [
-  "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1556909114-44e3e9399a2e?auto=format&fit=crop&w=900&q=80",
-  "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80",
-];
-
-const testimonials = [
-  {
-    quote:
-      "Parth Home Decor elevated our villa with materials we couldn't find anywhere else. The detailing is impeccable.",
-    name: "Ananya Mehta",
-    role: "Homeowner, Pune",
-  },
-  {
-    quote:
-      "From the fluted panels to the chandelier selection, the entire process felt effortless and refined.",
-    name: "Rohan Kapoor",
-    role: "Architect",
-  },
-  {
-    quote:
-      "Our hotel lobby received endless compliments. Quality, craft, and consultancy of the highest order.",
-    name: "Vikram Shah",
-    role: "Hospitality Developer",
-  },
-];
+const iconMap = { Award, Sparkles, Lightbulb, Layers, Wrench };
 
 export default function HomePage() {
   useDocumentMetadata(
@@ -100,7 +20,7 @@ export default function HomePage() {
   return (
     <PageShell>
       {/* HERO */}
-      <section className="relative -mt-24 md:-mt-28 h-screen min-h-[680px] w-full overflow-hidden">
+      <section className="relative -mt-20 md:-mt-24 lg:-mt-28 h-screen min-h-[540px] md:min-h-[680px] w-full overflow-hidden">
         <video
           autoPlay
           muted
@@ -113,7 +33,7 @@ export default function HomePage() {
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/45 to-charcoal/85" />
 
-        <div className="container-luxury relative z-10 flex h-full flex-col justify-end pb-24 text-ivory md:justify-center md:pb-0">
+        <div className="container-luxury relative z-10 flex h-full flex-col justify-end pb-16 md:pb-24 text-ivory md:justify-center md:pb-0">
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -126,7 +46,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.15, ease: "easeOut" }}
-            className="mt-6 max-w-5xl font-display text-5xl leading-[1.05] text-balance md:text-7xl lg:text-[5.5rem]"
+            className="mt-6 max-w-5xl font-display text-4xl leading-[1.05] text-balance md:text-5xl lg:text-7xl xl:text-[5.5rem]"
           >
             Transforming Spaces Into <em className="not-italic text-accent">Timeless</em>{" "}
             Experiences
@@ -144,7 +64,7 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.55 }}
-            className="mt-10 flex flex-wrap gap-4"
+            className="mt-8 md:mt-10 flex flex-wrap gap-4"
           >
             {/* <Link
               to="/products"
@@ -152,13 +72,13 @@ export default function HomePage() {
             >
               Explore Products
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-            </Link>
+            </Link> */}
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 rounded-full border border-ivory/60 px-8 py-4 text-xs font-medium uppercase tracking-[0.25em] text-ivory transition-all hover:bg-ivory hover:text-charcoal"
+              className="inline-flex items-center gap-2 rounded-full border border-ivory/60 px-6 py-3.5 md:px-8 md:py-4 text-xs font-medium uppercase tracking-[0.25em] text-ivory transition-all hover:bg-ivory hover:text-charcoal"
             >
               Contact Us
-            </Link> */}
+            </Link>
           </motion.div>
         </div>
 
@@ -179,23 +99,28 @@ export default function HomePage() {
           description="Five reasons discerning architects, designers and homeowners choose us for projects that demand more."
         />
         <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {features.map((f, i) => (
-            <motion.div
-              key={f.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.6, delay: i * 0.08 }}
-              className="group relative overflow-hidden rounded-sm border border-border bg-card p-8 transition-all hover:border-accent hover:luxury-shadow"
-            >
-              <div className="absolute -right-6 -top-6 h-32 w-32 rounded-full bg-accent/5 transition-transform duration-700 group-hover:scale-150" />
-              <f.icon className="relative text-accent" size={28} strokeWidth={1.5} />
-              <h3 className="relative mt-6 font-display text-2xl">{f.title}</h3>
-              <p className="relative mt-3 text-sm leading-relaxed text-muted-foreground">
-                {f.desc}
-              </p>
-            </motion.div>
-          ))}
+          {homeFeatures.map((f, i) => {
+            const IconComponent = iconMap[f.iconName as keyof typeof iconMap];
+            return (
+              <motion.div
+                key={f.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.6, delay: i * 0.08 }}
+                className="group relative overflow-hidden rounded-sm border border-border bg-card p-8 transition-all hover:border-accent hover:luxury-shadow"
+              >
+                <div className="absolute -right-6 -top-6 h-32 w-32 rounded-full bg-accent/5 transition-transform duration-700 group-hover:scale-150" />
+                {IconComponent && (
+                  <IconComponent className="relative text-accent" size={28} strokeWidth={1.5} />
+                )}
+                <h3 className="relative mt-6 font-display text-2xl">{f.title}</h3>
+                <p className="relative mt-3 text-sm leading-relaxed text-muted-foreground">
+                  {f.desc}
+                </p>
+              </motion.div>
+            );
+          })}
         </div>
       </section>
 
@@ -204,7 +129,7 @@ export default function HomePage() {
         <div className="container-luxury">
           <SectionHeading eyebrow="Featured Categories" title="A curated catalogue, end to end." />
           <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {categories.map((c, i) => (
+            {homeCategories.map((c, i) => (
               <motion.div
                 key={c.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -245,7 +170,7 @@ export default function HomePage() {
           title="Projects that speak in light, line and material."
         />
         <div className="mt-16 columns-1 gap-4 sm:columns-2 lg:columns-3 xl:columns-4">
-          {gallery.map((src, i) => (
+          {homeGallery.map((src, i) => (
             <motion.div
               key={src}
               initial={{ opacity: 0, y: 30 }}
@@ -277,7 +202,7 @@ export default function HomePage() {
             title="Trusted by those who notice the details."
           />
           <div className="mt-16 grid gap-8 md:grid-cols-3">
-            {testimonials.map((t, i) => (
+            {homeTestimonials.map((t, i) => (
               <motion.figure
                 key={t.name}
                 initial={{ opacity: 0, y: 30 }}
@@ -307,7 +232,7 @@ export default function HomePage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="relative overflow-hidden rounded-sm bg-gradient-luxe p-12 text-ivory md:p-20 luxury-shadow"
+          className="relative overflow-hidden rounded-sm bg-gradient-luxe p-8 text-ivory md:p-12 lg:p-20 luxury-shadow"
         >
           <div className="absolute inset-0 opacity-25">
             <img
@@ -319,19 +244,19 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-r from-navy-deep via-navy-deep/80 to-transparent" />
           <div className="relative max-w-2xl">
             <span className="text-xs uppercase tracking-[0.3em] text-accent">Let's begin</span>
-            <h2 className="mt-4 font-display text-4xl text-balance md:text-6xl">
+            <h2 className="mt-4 font-display text-3xl text-balance md:text-4xl lg:text-6xl">
               Ready to bring your space to life?
             </h2>
             <p className="mt-5 text-ivory/75">
               Visit our showroom or schedule a consultation. We'll guide you through every material,
               finish and possibility.
             </p>
-            {/* <Link
+            <Link
               to="/contact"
-              className="mt-10 inline-flex items-center gap-2 rounded-full bg-ivory px-8 py-4 text-xs font-medium uppercase tracking-[0.25em] text-charcoal transition-all hover:bg-accent"
+              className="mt-10 inline-flex items-center gap-2 rounded-full bg-ivory px-6 py-3.5 md:px-8 md:py-4 text-xs font-medium uppercase tracking-[0.25em] text-charcoal transition-all hover:bg-accent"
             >
               Book a Consultation <ArrowRight size={16} />
-            </Link> */}
+            </Link>
           </div>
         </motion.div>
       </section>

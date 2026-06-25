@@ -2,7 +2,7 @@ import { useMemo, useState } from "react";
 import { motion } from "motion/react";
 import { PageShell, SectionHeading } from "../components/PageShell";
 import { ProductCard } from "../components/ProductCard";
-import { products, categoryGroups, type CategoryGroup } from "../data/products";
+import { products, categoryGroups, type CategoryGroup } from "../data/siteData";
 import { useDocumentMetadata } from "../hooks/useDocumentMetadata";
 
 export default function ProductsPage() {
@@ -34,7 +34,7 @@ export default function ProductsPage() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="mt-5 max-w-4xl font-display text-5xl text-balance md:text-7xl"
+            className="mt-5 max-w-4xl font-display text-4xl text-balance md:text-5xl lg:text-7xl"
           >
             Materials and pieces chosen with intention.
           </motion.h1>
@@ -59,7 +59,7 @@ export default function ProductsPage() {
               <button
                 key={c}
                 onClick={() => setFilter(c)}
-                className={`relative rounded-full px-6 py-2.5 text-xs font-medium uppercase tracking-[0.2em] transition-all ${
+                className={`relative rounded-full px-4 py-2 md:px-6 md:py-2.5 text-xs font-medium uppercase tracking-[0.2em] transition-all ${
                   active
                     ? "bg-charcoal text-ivory"
                     : "border border-border text-muted-foreground hover:text-foreground"
@@ -69,7 +69,7 @@ export default function ProductsPage() {
               </button>
             );
           })}
-          <span className="ml-auto text-xs uppercase tracking-[0.2em] text-muted-foreground">
+          <span className="basis-full text-right md:basis-auto md:ml-auto text-xs uppercase tracking-[0.2em] text-muted-foreground">
             {filtered.length} products
           </span>
         </div>

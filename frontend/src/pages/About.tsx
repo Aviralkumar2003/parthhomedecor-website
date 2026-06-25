@@ -3,28 +3,9 @@ import { Gem, Sparkles, ShieldCheck, HeartHandshake } from "lucide-react";
 import { PageShell, SectionHeading } from "../components/PageShell";
 import { AnimatedCounter } from "../components/AnimatedCounter";
 import { useDocumentMetadata } from "../hooks/useDocumentMetadata";
+import { aboutValues, aboutStats } from "../data/siteData";
 
-const values = [
-  { icon: Gem, title: "Quality", desc: "Only materials we'd specify in our own homes." },
-  { icon: Sparkles, title: "Innovation", desc: "First to bring emerging finishes to the market." },
-  {
-    icon: ShieldCheck,
-    title: "Reliability",
-    desc: "On-time delivery, transparent pricing, flawless install.",
-  },
-  {
-    icon: HeartHandshake,
-    title: "Customer Commitment",
-    desc: "Long-term relationships over one-off transactions.",
-  },
-];
-
-const stats = [
-  { value: 500, suffix: "+", label: "Products Offered" },
-  { value: 1200, suffix: "+", label: "Happy Clients" },
-  { value: 850, suffix: "+", label: "Projects Completed" },
-  { value: 15, suffix: "+", label: "Years of Experience" },
-];
+const iconMap = { Gem, Sparkles, ShieldCheck, HeartHandshake };
 
 export default function AboutPage() {
   useDocumentMetadata(
@@ -35,7 +16,7 @@ export default function AboutPage() {
   return (
     <PageShell>
       {/* Hero */}
-      <section className="relative -mt-24 md:-mt-28 h-[80vh] min-h-[560px] overflow-hidden">
+      <section className="relative -mt-20 md:-mt-24 lg:-mt-28 h-[80vh] min-h-[440px] md:min-h-[560px] overflow-hidden">
         <img
           src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80"
           alt="Luxury interior"
@@ -55,7 +36,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.15 }}
-            className="mt-5 max-w-4xl font-display text-5xl text-balance md:text-7xl"
+            className="mt-5 max-w-4xl font-display text-4xl text-balance md:text-5xl lg:text-7xl"
           >
             A house of materials, built on trust and taste.
           </motion.h1>
@@ -67,7 +48,7 @@ export default function AboutPage() {
         <div className="grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <span className="text-xs uppercase tracking-[0.3em] text-accent">Company</span>
-            <h2 className="mt-4 font-display text-4xl md:text-5xl">Parth Home Decor</h2>
+            <h2 className="mt-4 font-display text-3xl md:text-4xl lg:text-5xl">Parth Home Decor</h2>
           </div>
           <div className="space-y-6 text-lg leading-relaxed text-muted-foreground lg:col-span-7">
             <p>
@@ -105,8 +86,8 @@ export default function AboutPage() {
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="rounded-sm border border-border bg-card p-10"
             >
-              <div className="font-display text-6xl text-accent">0{i + 1}</div>
-              <h3 className="mt-6 font-display text-3xl">{b.title}</h3>
+              <div className="font-display text-5xl md:text-6xl text-accent">0{i + 1}</div>
+              <h3 className="mt-6 font-display text-2xl md:text-3xl">{b.title}</h3>
               <p className="mt-4 leading-relaxed text-muted-foreground">{b.body}</p>
             </motion.div>
           ))}
@@ -121,31 +102,36 @@ export default function AboutPage() {
           align="center"
         />
         <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {values.map((v, i) => (
-            <motion.div
-              key={v.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="group relative overflow-hidden rounded-sm border border-border bg-card p-8 text-center transition-all hover:border-accent hover:luxury-shadow"
-            >
-              <v.icon
-                className="mx-auto text-accent transition-transform group-hover:scale-110"
-                size={32}
-                strokeWidth={1.5}
-              />
-              <h3 className="mt-6 font-display text-2xl">{v.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{v.desc}</p>
-            </motion.div>
-          ))}
+          {aboutValues.map((v, i) => {
+            const IconComponent = iconMap[v.iconName as keyof typeof iconMap];
+            return (
+              <motion.div
+                key={v.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className="group relative overflow-hidden rounded-sm border border-border bg-card p-8 text-center transition-all hover:border-accent hover:luxury-shadow"
+              >
+                {IconComponent && (
+                  <IconComponent
+                    className="mx-auto text-accent transition-transform group-hover:scale-110"
+                    size={32}
+                    strokeWidth={1.5}
+                  />
+                )}
+                <h3 className="mt-6 font-display text-2xl">{v.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{v.desc}</p>
+              </motion.div>
+            );
+          })}
         </div>
       </section>
 
       {/* Stats */}
       <section className="bg-charcoal py-28 text-ivory">
         <div className="container-luxury grid gap-10 text-center sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map((s, i) => (
+          {aboutStats.map((s, i) => (
             <motion.div
               key={s.label}
               initial={{ opacity: 0, y: 30 }}
@@ -153,7 +139,7 @@ export default function AboutPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
             >
-              <div className="font-display text-6xl text-accent md:text-7xl">
+              <div className="font-display text-5xl text-accent md:text-6xl lg:text-7xl">
                 <AnimatedCounter value={s.value} suffix={s.suffix} />
               </div>
               <div className="mt-4 text-xs uppercase tracking-[0.3em] text-ivory/60">{s.label}</div>

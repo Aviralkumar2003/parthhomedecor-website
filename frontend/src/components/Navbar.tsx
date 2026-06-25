@@ -9,7 +9,7 @@ const links = [
   // { to: "/products", label: "Products" },
   // { to: "/services", label: "Services" },
   // { to: "/about", label: "About" },
-  // { to: "/contact", label: "Contact" },
+  { to: "/contact", label: "Contact" },
 ] as const;
 
 export function Navbar() {
@@ -37,7 +37,7 @@ export function Navbar() {
             : "bg-gradient-to-b from-ivory/40 via-ivory/15 to-transparent backdrop-blur-md"
         }`}
       >
-        <nav className="container-luxury flex h-20 items-center justify-between md:h-24">
+        <nav className="container-luxury flex h-16 items-center justify-between md:h-20 lg:h-24">
           {/* Logo */}
           <Link to="/" className="group flex items-center gap-3">
             <motion.img
@@ -45,7 +45,7 @@ export function Navbar() {
               transition={{ type: "spring", stiffness: 300, damping: 18 }}
               src={logoAsset}
               alt="Parth Home Decor"
-              className="h-12 w-auto md:h-14 drop-shadow-[0_4px_12px_rgba(13,25,55,0.18)]"
+              className="h-10 w-auto md:h-12 lg:h-14 drop-shadow-[0_4px_12px_rgba(13,25,55,0.18)]"
             />
             <div className="hidden flex-col leading-none sm:flex">
               <span className="font-display text-[1.35rem] font-medium text-navy-deep">Parth</span>
@@ -122,7 +122,7 @@ export function Navbar() {
                     onClick={() => setOpen(false)}
                     className="flex items-baseline justify-between border-b border-gold/15 py-4 text-navy-deep"
                   >
-                    <span className="font-display text-3xl">{l.label}</span>
+                    <span className="font-display text-2xl">{l.label}</span>
                     <span className="font-script text-sm text-gold-deep">0{i + 1}</span>
                   </Link>
                 </motion.li>

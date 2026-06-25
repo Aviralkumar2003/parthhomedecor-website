@@ -8,7 +8,7 @@ export function PageShell({ children }: { children: ReactNode }) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className="pt-24 md:pt-28"
+      className="pt-20 md:pt-24 lg:pt-28"
     >
       {children}
     </motion.main>
@@ -35,7 +35,7 @@ export function SectionHeading({
       className={`max-w-3xl ${align === "center" ? "mx-auto text-center" : ""}`}
     >
       {eyebrow && <span className="text-xs uppercase tracking-[0.3em] text-accent">{eyebrow}</span>}
-      <h2 className="mt-4 font-display text-4xl text-balance md:text-5xl lg:text-6xl">{title}</h2>
+      <h2 className="mt-4 font-display text-3xl text-balance md:text-4xl lg:text-5xl xl:text-6xl">{title}</h2>
       {description && (
         <p className="mt-5 text-base leading-relaxed text-muted-foreground md:text-lg">
           {description}
