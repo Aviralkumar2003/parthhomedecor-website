@@ -57,8 +57,11 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="font-sans font-black uppercase tracking-tight text-ivory"
-              style={{ fontSize: "clamp(1.5rem, 5.5vw, 3.75rem)", lineHeight: 1.0 }}
+              className="uppercase text-ivory"
+              style={{
+                fontSize: "clamp(3.5rem, 10vw, 3.75rem)", lineHeight: 1.0, fontFamily: "'Cormorant Garamond', serif",
+                fontStyle: "italic"
+              }}
             >
               PARTH
             </motion.h1>
@@ -66,12 +69,14 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-              className="font-sans font-black uppercase tracking-tight"
+              className="uppercase"
               style={{
-                fontSize: "clamp(1.5rem, 5.5vw, 3.75rem)",
+                fontFamily: "'Cormorant Garamond', serif",
+                fontStyle: "italic",
+                fontSize: "clamp(3.5rem, 10vw, 3.75rem)",
                 lineHeight: 1.0,
                 color: "#C9972B",
-                textShadow: "0 2px 30px rgba(201,151,43,0.2)",
+                textShadow: "0 2px 30px rgba(201,151,43,0.3)",
               }}
             >
               HOME
@@ -80,8 +85,11 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="font-sans font-black uppercase tracking-tight text-ivory"
-              style={{ fontSize: "clamp(1.5rem, 5.5vw, 3.75rem)", lineHeight: 1.0 }}
+              className="uppercase text-ivory"
+              style={{
+                fontSize: "clamp(3.5rem, 10vw, 3.75rem)", lineHeight: 1.0, fontFamily: "'Cormorant Garamond', serif",
+                fontStyle: "italic",
+              }}
             >
               DECOR
             </motion.div>
@@ -94,7 +102,13 @@ export default function HomePage() {
             transition={{ duration: 0.8, delay: 0.45 }}
             className="mt-5 text-left"
           >
-            <p className="font-sans font-light text-ivory/90" style={{ fontSize: "clamp(1rem, 3vw, 1.35rem)" }}>
+            <p className="font-sans font-light text-ivory/90" style={{
+              color: "#ffffff",
+              fontFamily: "'Cormorant Garamond', serif",
+              fontStyle: "italic",
+              fontWeight: 500,
+              fontSize: "clamp(1rem, 3vw, 1.35rem)",
+            }}>
               Transforming Spaces Into{" "}
               <span
                 style={{
