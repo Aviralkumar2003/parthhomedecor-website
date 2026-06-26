@@ -31,7 +31,7 @@ export default function HomePage() {
         >
           <source src={heroVideo} type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-ivory/80 via-ivory/50 to-ivory/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/45 to-charcoal/85" />
 
         <div className="container-luxury relative z-10 flex h-full flex-col justify-end pb-24 pt-32 md:justify-center md:pb-0 md:pt-0">
           <div className="mb-auto md:mb-0">
@@ -39,7 +39,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.3em] md:text-xs"
+              className="flex items-center gap-3 text-[20px] font-bold uppercase tracking-[0.3em] md:text-md"
             >
               <div className="h-px w-8 bg-gold-deep/50 md:w-12" />
               <div>
@@ -49,22 +49,22 @@ export default function HomePage() {
               <div className="h-px w-8 bg-gold-deep/50 md:w-12" />
             </motion.div>
           </div>
-          
-          <div>
+
+          <div className="text-ivory">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.15, ease: "easeOut" }}
-              className="mt-6 max-w-5xl font-display text-4xl leading-[1.05] text-balance text-navy-deep md:text-5xl lg:text-7xl xl:text-[5.5rem]"
+              className="mt-6 max-w-5xl font-display text-4xl leading-[1.05] text-balance md:text-5xl lg:text-7xl xl:text-[5.5rem]"
             >
-              Transforming Spaces Into <em className="not-italic text-gold-deep" style={{ WebkitTextStroke: '0.5px var(--navy-deep)' }}>Timeless</em>{" "}
+              Transforming Spaces Into <em className="not-italic text-accent">Timeless</em>{" "}
               Experiences
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.4 }}
-              className="mt-6 max-w-2xl font-medium text-base leading-relaxed text-navy-deep/80 md:text-lg"
+              className="mt-6 max-w-2xl text-base leading-relaxed text-ivory/75 md:text-lg"
             >
               Premium Interior Materials, Modular Solutions, Exterior Elevation Systems & Designer
               Lighting.
@@ -73,16 +73,18 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.55 }}
-              className="mt-8 flex flex-wrap gap-4 md:mt-10"
+              className="mt-8 md:mt-10 flex flex-wrap gap-4"
             >
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-navy-deep px-6 py-3.5 md:px-8 md:py-4 text-xs font-bold uppercase tracking-[0.25em] text-ivory shadow-xl transition-all hover:bg-gold-deep hover:text-navy-deep"
-            >
-              Contact Us
-            </Link>
-          </motion.div>
-        </div>
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 rounded-full border border-ivory/60 px-6 py-3.5 md:px-8 md:py-4 text-xs font-medium uppercase tracking-[0.25em] text-ivory transition-all hover:bg-ivory hover:text-charcoal"
+              >
+                Contact Us
+              </Link>
+            </motion.div>
+
+          </div>
+
         </div>
 
         <motion.div
