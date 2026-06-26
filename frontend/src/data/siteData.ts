@@ -10,6 +10,20 @@ const img = (id: string) => `https://images.unsplash.com/${id}?auto=format&fit=c
 
 import modularKitchenImg from "../assets/modular-kitchen.png";
 
+// Service carousel images
+import interior1 from "../assets/services/interior-1.png";
+import interior2 from "../assets/services/interior-2.png";
+import interior3 from "../assets/services/interior-3.png";
+import modular1 from "../assets/services/modular-1.png";
+import modular2 from "../assets/services/modular-2.png";
+import modular3 from "../assets/services/modular-3.png";
+import exterior1 from "../assets/services/exterior-1.png";
+import exterior2 from "../assets/services/exterior-2.png";
+import exterior3 from "../assets/services/exterior-3.png";
+import lighting1 from "../assets/services/lighting-1.png";
+import lighting2 from "../assets/services/lighting-2.png";
+import lighting3 from "../assets/services/lighting-3.png";
+
 export const companyInfo = {
   name: "Parth Home Decor",
   phone: "+91 7017237170",
@@ -232,21 +246,21 @@ export const services = [
       "Wall & Ceiling Solutions",
       "Decorative Finishes",
     ],
-    image: img("photo-1618221195710-dd6b41faaea6"),
+    images: [interior1, interior2, interior3],
   },
   {
     eyebrow: "Modular Kitchen Solutions",
     title: "Modular kitchens, storage and bespoke joinery.",
     desc: "Engineered for daily life and built to last. Premium core materials, German hardware and a precision-fit installation process.",
     items: ["Modular Kitchens", "Wardrobes & Storage Solutions", "Custom Interior Fabrication", "Kitchen Accessories & Hardware"],
-    image: modularKitchenImg,
+    images: [modular1, modular2, modular3],
   },
   {
     eyebrow: "Exterior Solutions",
     title: "Facades that compose the first impression.",
     desc: "ACP elevations, HPL facades and decorative installations — engineered for weather, designed for character.",
     items: ["ACP Elevation Work", "HPL Facades", "Exterior Decorative Installations"],
-    image: img("photo-1487958449943-2429e8be8625"),
+    images: [exterior1, exterior2, exterior3],
   },
   {
     eyebrow: "Lighting Solutions",
@@ -257,7 +271,7 @@ export const services = [
       "Decorative Lighting Installation",
       "Architectural Lighting",
     ],
-    image: img("photo-1565814329452-e1efa11c5b89"),
+    images: [lighting1, lighting2, lighting3],
   },
 ];
 
