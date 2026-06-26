@@ -7,7 +7,7 @@ import logoAsset from "../assets/parth-logo.png";
 const links = [
   { to: "/", label: "Home" },
   // { to: "/products", label: "Products" },
-  // { to: "/services", label: "Services" },
+  { to: "/services", label: "Services" },
   // { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ] as const;
@@ -74,22 +74,6 @@ export function Navbar() {
             ))}
           </ul>
 
-          {/* CTA */}
-          {/* <Link
-            to="/contact"
-            className="group relative hidden items-center gap-2 overflow-hidden rounded-full bg-gradient-luxe px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-ivory gold-shadow transition-transform hover:scale-[1.03] md:inline-flex"
-          >
-            <span className="relative z-10">Get a Quote</span>
-            <ArrowUpRight
-              size={14}
-              className="relative z-10 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-            />
-            <span className="absolute inset-0 -translate-x-full bg-gradient-gold transition-transform duration-500 group-hover:translate-x-0" />
-            <span className="absolute inset-0 z-20 flex items-center justify-center gap-2 text-navy-deep opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-              Get a Quote <ArrowUpRight size={14} />
-            </span>
-          </Link> */}
-
           <button
             aria-label="Toggle menu"
             onClick={() => setOpen((v) => !v)}
@@ -127,13 +111,6 @@ export function Navbar() {
                   </Link>
                 </motion.li>
               ))}
-              {/* <Link
-                to="/contact"
-                onClick={() => setOpen(false)}
-                className="mt-4 rounded-full bg-gradient-luxe px-6 py-4 text-center text-xs font-semibold uppercase tracking-[0.22em] text-ivory"
-              >
-                Get a Quote
-              </Link> */}
             </ul>
           </motion.div>
         )}

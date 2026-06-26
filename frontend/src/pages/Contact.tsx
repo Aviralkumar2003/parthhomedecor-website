@@ -204,7 +204,7 @@ export default function ContactPage() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="space-y-6 lg:col-span-5"
         >
-          {/* <div className="rounded-sm border border-border bg-card p-8">
+          <div className="rounded-sm border border-border bg-card p-8">
             <Clock className="text-accent" size={22} strokeWidth={1.5} />
             <h3 className="mt-5 font-display text-2xl">Business Hours</h3>
             <ul className="mt-6 space-y-4 text-sm">
@@ -218,15 +218,15 @@ export default function ContactPage() {
                 </li>
               ))}
             </ul>
-          </div> */}
-          {/* <div className="overflow-hidden rounded-sm border border-border bg-secondary">
+          </div>
+          <div className="overflow-hidden rounded-sm border border-border bg-secondary">
             <iframe
               title="Map"
               src={companyInfo.mapEmbedUrl}
-              className="h-72 w-full grayscale"
+              className="h-72 w-full"
               loading="lazy"
             />
-          </div> */}
+          </div>
         </motion.div>
       </section>
 

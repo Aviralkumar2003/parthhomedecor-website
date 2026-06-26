@@ -23,11 +23,10 @@ export function Footer() {
             Premium interior &amp; exterior materials, modular solutions and designer lighting —
             crafted for timeless spaces.
           </p>
-          {/* <div className="mt-6 flex gap-3">
+          <div className="mt-6 flex gap-3">
             {[
               { Icon: Instagram, href: companyInfo.instagramUrl },
               { Icon: Facebook, href: companyInfo.facebookUrl },
-              { Icon: Linkedin, href: companyInfo.linkedinUrl },
             ].map(({ Icon, href }, i) => (
               <a
                 key={i}
@@ -39,7 +38,7 @@ export function Footer() {
                 <Icon size={16} />
               </a>
             ))}
-          </div> */}
+          </div>
         </div>
 
         <div>
@@ -48,7 +47,7 @@ export function Footer() {
             {[
               { to: "/", label: "Home" },
               // { to: "/products", label: "Products" },
-              // { to: "/services", label: "Services" },
+              { to: "/services", label: "Services" },
               // { to: "/about", label: "About" },
               { to: "/contact", label: "Contact" },
             ].map((l) => (
@@ -61,15 +60,15 @@ export function Footer() {
           </ul>
         </div>
 
-        {/* <div>
+        <div>
           <h4 className="text-xs uppercase tracking-[0.25em] text-ivory/50">Categories</h4>
           <ul className="mt-5 space-y-3 text-sm text-ivory/70">
-            <li>Interior Materials</li>
-            <li>Modular Solutions</li>
+            <li>Interior Designing to Execution</li>
+            <li>Modular Furniture and Kitchen</li>
             <li>Exterior Elevation</li>
             <li>Designer Lighting</li>
           </ul>
-        </div> */}
+        </div>
 
         <div>
           <h4 className="text-xs uppercase tracking-[0.25em] text-ivory/50">Visit</h4>

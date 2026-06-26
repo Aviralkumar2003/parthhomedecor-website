@@ -8,6 +8,8 @@ export interface ProductItem {
 
 const img = (id: string) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=900&q=80`;
 
+import modularKitchenImg from "../assets/modular-kitchen.png";
+
 export const companyInfo = {
   name: "Parth Home Decor",
   phone: "+91 7017237170",
@@ -15,16 +17,13 @@ export const companyInfo = {
   whatsappLink: "https://wa.me/917017237170",
   email: "parthhomedecoretawah@gmail.com",
   address: "N.H.19 Service Road, Near Sai Cold Store, Bharthana Chauraha, Etawah - 206001",
-  instagramUrl: "https://instagram.com/parthhomedecor",
-  facebookUrl: "https://facebook.com",
-  linkedinUrl: "https://linkedin.com",
-  mapEmbedUrl: "https://www.google.com/maps?q=interior+design+showroom&output=embed",
+  instagramUrl: "https://www.instagram.com/parth__home_decor_etwah?igsh=cWZtNXFhamo1eno5",
+  facebookUrl: "https://www.facebook.com/Parthtradershomedecor",
+  mapEmbedUrl: "https://maps.google.com/maps?q=Parth+Home+Decor+%26+Interior+Showroom+Etawah&z=17&ie=UTF8&iwloc=&output=embed",
 };
 
 export const businessHours = [
-  { day: "Monday – Saturday", time: "10:00 AM – 8:00 PM" },
-  { day: "Sunday", time: "11:00 AM – 6:00 PM" },
-  { day: "Public Holidays", time: "By Appointment" },
+  { day: "Monday – Sunday", time: "08:00 AM – 10:00 PM" },
 ];
 
 export const products: ProductItem[] = [
@@ -133,7 +132,7 @@ export const products: ProductItem[] = [
     name: "HDMR",
     category: "Modular",
     group: "Modular",
-    image: img("photo-1556909114-44e3e9399a2e"),
+    image: img("photo-1600585154526-990dced4db0d"),
     description: "High-density moisture resistant boards.",
   },
   {
@@ -236,11 +235,11 @@ export const services = [
     image: img("photo-1618221195710-dd6b41faaea6"),
   },
   {
-    eyebrow: "Modular Solutions",
+    eyebrow: "Modular Kitchen Solutions",
     title: "Modular kitchens, storage and bespoke joinery.",
     desc: "Engineered for daily life and built to last. Premium core materials, German hardware and a precision-fit installation process.",
-    items: ["Modular Kitchens", "Storage Solutions", "Custom Interior Fabrication"],
-    image: img("photo-1556909114-44e3e9399a2e"),
+    items: ["Modular Kitchens", "Wardrobes & Storage Solutions", "Custom Interior Fabrication", "Kitchen Accessories & Hardware"],
+    image: modularKitchenImg,
   },
   {
     eyebrow: "Exterior Solutions",
@@ -355,7 +354,7 @@ export const homeGallery = [
   img("photo-1618221195710-dd6b41faaea6"),
   img("photo-1600210492486-724fe5c67fb0"),
   img("photo-1560448204-e02f11c3d0e2"),
-  img("photo-1556909114-44e3e9399a2e"),
+  img("photo-1600585154526-990dced4db0d"),
   img("photo-1600607687939-ce8a6c25118c"),
 ];
 
