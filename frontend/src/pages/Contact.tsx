@@ -1,4 +1,4 @@
-import { useState, useRef, type FormEvent } from "react";
+import { useState, useRef } from "react";
 import { motion } from "motion/react";
 import { Phone, Mail, MapPin, MessageCircle, Clock, Send, Check } from "lucide-react";
 import { PageShell, SectionHeading } from "../components/PageShell";

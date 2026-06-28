@@ -46,7 +46,7 @@ export function Footer() {
           <ul className="mt-5 space-y-3 text-sm">
             {[
               { to: "/", label: "Home" },
-              // { to: "/products", label: "Products" },
+              { to: "/products", label: "Products" },
               { to: "/services", label: "Services" },
               // { to: "/about", label: "About" },
               { to: "/contact", label: "Contact" },

@@ -10,6 +10,34 @@ const img = (id: string) => `https://images.unsplash.com/${id}?auto=format&fit=c
 
 import modularKitchenImg from "../assets/modular-kitchen.png";
 
+// Product images (Unsplash License — free for commercial use, downloaded locally)
+import pvcPanelsImg from "../assets/products/pvc-panels.jpg";
+import wpcPanelsImg from "../assets/products/wpc-panels.jpg";
+import flutedPanelsImg from "../assets/products/fluted-panels.jpg";
+import charcoalPanelsImg from "../assets/products/charcoal-panels.jpg";
+import soffitPanelsImg from "../assets/products/soffit-panels.jpg";
+import uvSheetsImg from "../assets/products/uv-sheets.jpg";
+import uvRollsImg from "../assets/products/uv-rolls.jpg";
+import threeDPanelsImg from "../assets/products/3d-panels.jpg";
+import mosaicTilesImg from "../assets/products/mosaic-tiles.jpg";
+import wallpaperImg from "../assets/products/wallpaper.jpg";
+import puStoneImg from "../assets/products/pu-stone.jpg";
+import verticalGardensImg from "../assets/products/vertical-gardens.jpg";
+import woodenFlooringImg from "../assets/products/wooden-flooring.jpg";
+import plyBoardImg from "../assets/products/ply-board.jpg";
+import hdmrImg from "../assets/products/hdmr.jpg";
+import laminatesImg from "../assets/products/laminates.jpg";
+import acrylicImg from "../assets/products/acrylic.jpg";
+import glassWorkImg from "../assets/products/glass-work.jpg";
+import aluminiumSolutionsImg from "../assets/products/aluminium-solutions.jpg";
+import acpCladdingImg from "../assets/products/acp-cladding.jpg";
+import hplElevationImg from "../assets/products/hpl-elevation.jpg";
+import fancyLightsImg from "../assets/products/fancy-lights.jpg";
+import chandeliersImg from "../assets/products/chandeliers.jpg";
+import ledPanelsImg from "../assets/products/led-panels.jpg";
+import profileLightsImg from "../assets/products/profile-lights.jpg";
+import cobLightsImg from "../assets/products/cob-lights.jpg";
+
 // Service carousel images
 import interior1 from "../assets/services/interior-1.png";
 import interior2 from "../assets/services/interior-2.png";
@@ -46,91 +74,91 @@ export const products: ProductItem[] = [
     name: "PVC Panels",
     category: "Interior",
     group: "Interior",
-    image: img("photo-1615873968403-89e068629265"),
+    image: pvcPanelsImg,
     description: "Lightweight, moisture-resistant decorative wall panels.",
   },
   {
     name: "WPC Panels",
     category: "Interior",
     group: "Interior",
-    image: img("photo-1616486338812-3dadae4b4ace"),
+    image: wpcPanelsImg,
     description: "Wood-polymer composite panels with premium texture.",
   },
   {
     name: "Fluted Panels",
     category: "Interior",
     group: "Interior",
-    image: img("photo-1618221195710-dd6b41faaea6"),
+    image: flutedPanelsImg,
     description: "Vertical ribbed panels for sculptural feature walls.",
   },
   {
     name: "Charcoal Panels",
     category: "Interior",
     group: "Interior",
-    image: img("photo-1600585154340-be6161a56a0c"),
+    image: charcoalPanelsImg,
     description: "Dark, dramatic finishes for modern interiors.",
   },
   {
     name: "Soffit Panels",
     category: "Interior",
     group: "Interior",
-    image: img("photo-1600607687939-ce8a6c25118c"),
+    image: soffitPanelsImg,
     description: "Refined ceiling and underside cladding.",
   },
   {
     name: "UV Sheets",
     category: "Interior",
     group: "Interior",
-    image: img("photo-1556909114-f6e7ad7d3136"),
+    image: uvSheetsImg,
     description: "High-gloss UV-coated decorative surfaces.",
   },
   {
     name: "UV Rolls",
     category: "Interior",
     group: "Interior",
-    image: img("photo-1567016526105-22da7c13161a"),
+    image: uvRollsImg,
     description: "Flexible UV finishes for curved applications.",
   },
   {
     name: "3D Panels",
     category: "Interior",
     group: "Interior",
-    image: img("photo-1618219740975-d40978bb7378"),
+    image: threeDPanelsImg,
     description: "Sculpted dimensional panels with cinematic light play.",
   },
   {
     name: "Mosaic Tiles",
     category: "Interior",
     group: "Interior",
-    image: img("photo-1600566753190-17f0baa2a6c3"),
+    image: mosaicTilesImg,
     description: "Artisan tiled compositions for feature surfaces.",
   },
   {
     name: "Wallpaper",
     category: "Interior",
     group: "Interior",
-    image: img("photo-1615529182904-14819c35db37"),
+    image: wallpaperImg,
     description: "Curated wallpaper collections from leading mills.",
   },
   {
     name: "PU Stone",
     category: "Interior",
     group: "Interior",
-    image: img("photo-1604147706283-d7119b5b822c"),
+    image: puStoneImg,
     description: "Lightweight polyurethane stone with natural realism.",
   },
   {
     name: "Vertical Gardens",
     category: "Interior",
     group: "Interior",
-    image: img("photo-1485955900006-10f4d324d411"),
+    image: verticalGardensImg,
     description: "Living and faux greenery installations.",
   },
   {
     name: "Wooden Flooring",
     category: "Interior",
     group: "Interior",
-    image: img("photo-1581858726788-75bc0f6a952d"),
+    image: woodenFlooringImg,
     description: "Engineered and laminate wooden floors.",
   },
 
@@ -139,42 +167,42 @@ export const products: ProductItem[] = [
     name: "Ply Board",
     category: "Modular",
     group: "Modular",
-    image: img("photo-1503602642458-232111445657"),
+    image: plyBoardImg,
     description: "Premium plywood for furniture and joinery.",
   },
   {
     name: "HDMR",
     category: "Modular",
     group: "Modular",
-    image: img("photo-1600585154526-990dced4db0d"),
+    image: hdmrImg,
     description: "High-density moisture resistant boards.",
   },
   {
     name: "Laminates",
     category: "Modular",
     group: "Modular",
-    image: img("photo-1616137422495-1e9e46e2aa77"),
+    image: laminatesImg,
     description: "Decorative and textured laminate finishes.",
   },
   {
     name: "Acrylic",
     category: "Modular",
     group: "Modular",
-    image: img("photo-1631679706909-1844bbd07221"),
+    image: acrylicImg,
     description: "High-gloss acrylic surfaces for shutters.",
   },
   {
     name: "Glass Work",
     category: "Modular",
     group: "Modular",
-    image: img("photo-1617104678098-de229db51175"),
+    image: glassWorkImg,
     description: "Designer glass for partitions and shutters.",
   },
   {
     name: "Aluminium Solutions",
     category: "Modular",
     group: "Modular",
-    image: img("photo-1545079968-1feb95494244"),
+    image: aluminiumSolutionsImg,
     description: "Modular aluminium kitchen & wardrobe systems.",
   },
 
@@ -183,14 +211,14 @@ export const products: ProductItem[] = [
     name: "ACP Cladding",
     category: "Exterior",
     group: "Exterior",
-    image: img("photo-1503387762-592deb58ef4e"),
+    image: acpCladdingImg,
     description: "Aluminium composite cladding for facades.",
   },
   {
     name: "HPL Front Elevation",
     category: "Exterior",
     group: "Exterior",
-    image: img("photo-1487958449943-2429e8be8625"),
+    image: hplElevationImg,
     description: "High-pressure laminate elevation systems.",
   },
 
@@ -199,35 +227,35 @@ export const products: ProductItem[] = [
     name: "Fancy Lights",
     category: "Lighting",
     group: "Lighting",
-    image: img("photo-1513506003901-1e6a229e2d15"),
+    image: fancyLightsImg,
     description: "Statement decorative pieces for any room.",
   },
   {
     name: "Chandeliers",
     category: "Lighting",
     group: "Lighting",
-    image: img("photo-1565814329452-e1efa11c5b89"),
+    image: chandeliersImg,
     description: "Sculptural chandeliers for grand interiors.",
   },
   {
     name: "LED Panels",
     category: "Lighting",
     group: "Lighting",
-    image: img("photo-1524634126442-357e0eac3c14"),
+    image: ledPanelsImg,
     description: "Slim, efficient panel lights.",
   },
   {
     name: "Profile Lights",
     category: "Lighting",
     group: "Lighting",
-    image: img("photo-1567538096630-e0c55bd6374c"),
+    image: profileLightsImg,
     description: "Architectural linear profile lighting.",
   },
   {
     name: "COB Lights",
     category: "Lighting",
     group: "Lighting",
-    image: img("photo-1540932239986-30128078f3c5"),
+    image: cobLightsImg,
     description: "Focused chip-on-board accent lighting.",
   },
 ];

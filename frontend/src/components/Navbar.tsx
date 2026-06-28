@@ -6,7 +6,7 @@ import logoAsset from "../assets/parth-logo.png";
 
 const links = [
   { to: "/", label: "Home" },
-  // { to: "/products", label: "Products" },
+  { to: "/products", label: "Products" },
   { to: "/services", label: "Services" },
   // { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
