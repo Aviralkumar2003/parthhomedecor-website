@@ -4,7 +4,7 @@ import { ArrowRight, Sparkles, Award, Lightbulb, Layers, Wrench, Home, Grid3X3, 
 import { PageShell, SectionHeading } from "../components/PageShell";
 import { useDocumentMetadata } from "../hooks/useDocumentMetadata";
 import { homeFeatures, homeCategories, homeGallery, homeTestimonials } from "../data/siteData";
-import heroBg from "../assets/Home Page Hero Section.png";
+import heroBg from "../assets/HomePageHero.png";
 
 const iconMap = { Award, Sparkles, Lightbulb, Layers, Wrench };
 
@@ -29,7 +29,7 @@ export default function HomePage() {
         <img
           src={heroBg}
           alt="Luxury interior"
-          className="absolute inset-0 h-full w-full object-cover object-center"
+          className="absolute inset-0 h-full w-full object-cover object-[70%_center] md:object-center"
           fetchPriority="high"
         />
         {/* Dark overlay — stronger at top & bottom for text legibility */}
@@ -56,7 +56,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="uppercase text-ivory font-display font-bold italic"
+              className="font-serif text-ivory italic font-light uppercase"
               style={{
                 fontSize: "clamp(3rem, 12vw, 5.5rem)",
                 lineHeight: 1.0,
@@ -71,7 +71,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-              className="uppercase font-display font-bold italic"
+              className="font-serif italic font-light uppercase"
               style={{
                 fontSize: "clamp(3rem, 12vw, 5.5rem)",
                 lineHeight: 1.0,
@@ -87,7 +87,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="uppercase text-ivory font-display font-bold italic"
+              className="font-serif text-ivory italic font-light uppercase"
               style={{
                 fontSize: "clamp(3rem, 12vw, 5.5rem)",
                 lineHeight: 1.0,

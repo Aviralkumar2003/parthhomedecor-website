@@ -11,20 +11,20 @@ const img = (id: string) => `https://images.unsplash.com/${id}?auto=format&fit=c
 import modularKitchenImg from "../assets/modular-kitchen.png";
 
 // Product images (Unsplash License — free for commercial use, downloaded locally)
-import pvcPanelsImg from "../assets/products/pvc-panels.jpg";
-import wpcPanelsImg from "../assets/products/wpc-panels.jpg";
+import pvcPanelsImg from "../assets/products/pvc-panels.png";
+import wpcPanelsImg from "../assets/products/wpc-panels.png";
 import flutedPanelsImg from "../assets/products/fluted-panels.jpg";
 import charcoalPanelsImg from "../assets/products/charcoal-panels.jpg";
-import soffitPanelsImg from "../assets/products/soffit-panels.jpg";
-import uvSheetsImg from "../assets/products/uv-sheets.jpg";
-import uvRollsImg from "../assets/products/uv-rolls.jpg";
+import soffitPanelsImg from "../assets/products/soffit-panels.png";
+import uvSheetsImg from "../assets/products/uv-sheets.png";
+import uvRollsImg from "../assets/products/uv-rolls.png";
 import threeDPanelsImg from "../assets/products/3d-panels.jpg";
 import mosaicTilesImg from "../assets/products/mosaic-tiles.jpg";
-import wallpaperImg from "../assets/products/wallpaper.jpg";
-import puStoneImg from "../assets/products/pu-stone.jpg";
-import verticalGardensImg from "../assets/products/vertical-gardens.jpg";
+import wallpaperImg from "../assets/products/wallpaper.png";
+import puStoneImg from "../assets/products/pu-stone.png";
+import verticalGardensImg from "../assets/products/vertical-gardens.png";
 import woodenFlooringImg from "../assets/products/wooden-flooring.jpg";
-import plyBoardImg from "../assets/products/ply-board.jpg";
+import plyBoardImg from "../assets/products/ply-board.png";
 import hdmrImg from "../assets/products/hdmr.jpg";
 import laminatesImg from "../assets/products/laminates.jpg";
 import acrylicImg from "../assets/products/acrylic.jpg";
@@ -34,8 +34,8 @@ import acpCladdingImg from "../assets/products/acp-cladding.jpg";
 import hplElevationImg from "../assets/products/hpl-elevation.jpg";
 import fancyLightsImg from "../assets/products/fancy-lights.jpg";
 import chandeliersImg from "../assets/products/chandeliers.jpg";
-import ledPanelsImg from "../assets/products/led-panels.jpg";
-import profileLightsImg from "../assets/products/profile-lights.jpg";
+import ledPanelsImg from "../assets/products/led-panels.png";
+import profileLightsImg from "../assets/products/profile-lights.png";
 import cobLightsImg from "../assets/products/cob-lights.jpg";
 
 // Service carousel images
